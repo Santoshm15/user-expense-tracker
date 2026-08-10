@@ -1,75 +1,118 @@
-# React + TypeScript + Vite
+# User Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript application containing two applications:
 
-Currently, two official plugins are available:
+- User Directory
+- Expense Tracker
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Application
 
-## React Compiler
+🚀 **Live Demo:**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://santoshm15.github.io/user-expense-tracker/
 
-## Expanding the ESLint configuration
+## GitHub Repository
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+https://github.com/Santoshm15/user-expense-tracker
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Applications
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. User Directory
 
-```
+The User Directory application allows users to:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Fetch users from an API
+- Search users by name
+- Filter users by city
+- Display users in cards
+- View user information
+- Handle loading states
+- Handle API errors
+- Display a message when no users are found
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Expense Tracker
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The Expense Tracker application allows users to:
 
+- Add expenses
+- Validate required fields
+- Select an expense category
+- Enter expense amount
+- Select expense date
+- View total expenses
+- View number of expenses
+- View highest expense
+- Filter expenses by category
+- Delete expenses
+- Display success messages after adding an expense
+- Display a message when no expenses are available
+
+---
+
+## Features
+
+- React
+- TypeScript
+- Vite
+- React Router
+- Responsive user interface
+- API integration
+- Search functionality
+- City filtering
+- Category filtering
+- Form validation
+- Reusable React components
+- GitHub Pages deployment
+
+---
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## Project Structure
+
+```text
+user-expense-tracker/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── ExpenseForm.tsx
+│   │   ├── ExpenseList.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── SummaryCard.tsx
+│   │   └── UserCard.tsx
+│   │
+│   ├── pages/
+│   │   ├── Users.tsx
+│   │   └── Expenses.tsx
+│   │
+│   ├── types/
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
