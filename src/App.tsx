@@ -5,7 +5,7 @@ import Expenses from "./pages/Expenses";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         {/* First Selection Screen */}
 
@@ -21,6 +21,8 @@ function App() {
                 </div>
 
                 <div className="selection-cards">
+                  {/* User Directory */}
+
                   <Link to="/users" className="selection-card user-selection">
                     <div className="selection-icon">👥</div>
 
@@ -32,6 +34,8 @@ function App() {
                       <span>Open User Directory →</span>
                     </div>
                   </Link>
+
+                  {/* Expense Tracker */}
 
                   <Link
                     to="/expenses"
